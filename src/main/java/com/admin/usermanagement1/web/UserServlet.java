@@ -14,9 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.admin.usermanagement1.dao.UserDao;
 import com.admin.usermanagement1.ib.User;
 
-/**
- * Servlet implementation class UserServlet
- */
+
 @jakarta.servlet.annotation.WebServlet("/")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,24 +22,18 @@ public class UserServlet extends HttpServlet {
        
    
 
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
+	
 	public void init(ServletConfig config) throws ServletException {
 		userDAO = new UserDao();
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getServletPath();
 
